@@ -1,8 +1,6 @@
 const MongoClient = require("mongodb").MongoClient;
 const env = require("dotenv").config();
 
-//use user and password from .env file
-
 const url = `mongodb+srv://${process.env.user}:${process.env.password}@cluster0.gii5srf.mongodb.net/${process.env.db}?retryWrites=true&w=majority`;
 const createProduct = async (req, res, next) => {
   const newProduct = {
